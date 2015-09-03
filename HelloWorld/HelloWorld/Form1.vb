@@ -8,4 +8,10 @@
         MessageBox.Show("Hello World")
         ToolStripStatusLabel1.Text = "Hello World we are the Minions :)"
     End Sub
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ToolStripStatusLabel1.Text = ""
+    End Sub
+
+
 End Class
