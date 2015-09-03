@@ -6,5 +6,6 @@
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         MessageBox.Show("Hello World")
+        ToolStripStatusLabel1.Text = "Hello World we are the Minions :)"
     End Sub
 End Class
