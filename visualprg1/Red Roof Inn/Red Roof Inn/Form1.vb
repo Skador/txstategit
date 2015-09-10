@@ -23,14 +23,11 @@
 
         Try
             ' Calculate and display the room charges.
-            decRoomCharges = CDec(txtNights.Text) *
-         CDec(txtNightlyCharge.Text)
+            decRoomCharges = CDec(txtNights.Text) * CDec(txtNightlyCharge.Text)
             lblRoomCharges.Text = decRoomCharges.ToString("c")
 
             ' Calculate and display the additional charges.
-            decAddCharges = CDec(txtRoomService.Text) +
-         CDec(txtTelephone.Text) +
-                     CDec(txtMisc.Text)
+            decAddCharges = CDec(txtRoomService.Text) + CDec(txtTelephone.Text) + CDec(txtMisc.Text)
             lblAddCharges.Text = decAddCharges.ToString("c")
 
             ' Calculate and display the subtotal.

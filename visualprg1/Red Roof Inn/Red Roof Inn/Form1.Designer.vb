@@ -330,7 +330,7 @@ Partial Class Form1
         Me.GroupBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox3.Location = New System.Drawing.Point(47, 286)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(421, 231)
+        Me.GroupBox3.Size = New System.Drawing.Size(436, 231)
         Me.GroupBox3.TabIndex = 30
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Total Charges"
