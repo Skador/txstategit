@@ -22,163 +22,184 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton3 = New System.Windows.Forms.RadioButton()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.GroupBox1.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
+        Me.gbSubscriptionPackage = New System.Windows.Forms.GroupBox()
+        Me.rbPackageC = New System.Windows.Forms.RadioButton()
+        Me.rbPackageB = New System.Windows.Forms.RadioButton()
+        Me.rbPackageA = New System.Windows.Forms.RadioButton()
+        Me.gbDiscount = New System.Windows.Forms.GroupBox()
+        Me.cbNonProfOrg = New System.Windows.Forms.CheckBox()
+        Me.btnExit = New System.Windows.Forms.Button()
+        Me.btnClear = New System.Windows.Forms.Button()
+        Me.btnCalculate = New System.Windows.Forms.Button()
+        Me.lblNbrOfHrsUsed = New System.Windows.Forms.Label()
+        Me.lblTotalAmountText = New System.Windows.Forms.Label()
+        Me.txtNbrHrsEntered = New System.Windows.Forms.TextBox()
+        Me.lblTotalAmount = New System.Windows.Forms.Label()
+        Me.gbSubscriptionPackage.SuspendLayout()
+        Me.gbDiscount.SuspendLayout()
         Me.SuspendLayout()
         '
-        'GroupBox1
+        'gbSubscriptionPackage
         '
-        Me.GroupBox1.Controls.Add(Me.RadioButton3)
-        Me.GroupBox1.Controls.Add(Me.RadioButton2)
-        Me.GroupBox1.Controls.Add(Me.RadioButton1)
-        Me.GroupBox1.Controls.Add(Me.GroupBox2)
-        Me.GroupBox1.Location = New System.Drawing.Point(0, 0)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(264, 98)
-        Me.GroupBox1.TabIndex = 0
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "GroupBox1"
+        Me.gbSubscriptionPackage.Controls.Add(Me.rbPackageC)
+        Me.gbSubscriptionPackage.Controls.Add(Me.rbPackageB)
+        Me.gbSubscriptionPackage.Controls.Add(Me.rbPackageA)
+        Me.gbSubscriptionPackage.Controls.Add(Me.gbDiscount)
+        Me.gbSubscriptionPackage.Location = New System.Drawing.Point(0, 0)
+        Me.gbSubscriptionPackage.Name = "gbSubscriptionPackage"
+        Me.gbSubscriptionPackage.Size = New System.Drawing.Size(264, 98)
+        Me.gbSubscriptionPackage.TabIndex = 0
+        Me.gbSubscriptionPackage.TabStop = False
+        Me.gbSubscriptionPackage.Text = "Select a Subscription Package"
         '
-        'GroupBox2
+        'rbPackageC
         '
-        Me.GroupBox2.Controls.Add(Me.CheckBox1)
-        Me.GroupBox2.Location = New System.Drawing.Point(118, 47)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(146, 51)
-        Me.GroupBox2.TabIndex = 0
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "GroupBox2"
+        Me.rbPackageC.AutoSize = True
+        Me.rbPackageC.Location = New System.Drawing.Point(6, 70)
+        Me.rbPackageC.Name = "rbPackageC"
+        Me.rbPackageC.Size = New System.Drawing.Size(78, 17)
+        Me.rbPackageC.TabIndex = 3
+        Me.rbPackageC.TabStop = True
+        Me.rbPackageC.Text = "Package C"
+        Me.rbPackageC.UseVisualStyleBackColor = True
         '
-        'RadioButton1
+        'rbPackageB
         '
-        Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Location = New System.Drawing.Point(6, 24)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(90, 17)
-        Me.RadioButton1.TabIndex = 1
-        Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "RadioButton1"
-        Me.RadioButton1.UseVisualStyleBackColor = True
+        Me.rbPackageB.AutoSize = True
+        Me.rbPackageB.Location = New System.Drawing.Point(6, 47)
+        Me.rbPackageB.Name = "rbPackageB"
+        Me.rbPackageB.Size = New System.Drawing.Size(78, 17)
+        Me.rbPackageB.TabIndex = 2
+        Me.rbPackageB.TabStop = True
+        Me.rbPackageB.Text = "Package B"
+        Me.rbPackageB.UseVisualStyleBackColor = True
         '
-        'RadioButton2
+        'rbPackageA
         '
-        Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Location = New System.Drawing.Point(6, 47)
-        Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(90, 17)
-        Me.RadioButton2.TabIndex = 2
-        Me.RadioButton2.TabStop = True
-        Me.RadioButton2.Text = "RadioButton2"
-        Me.RadioButton2.UseVisualStyleBackColor = True
+        Me.rbPackageA.AutoSize = True
+        Me.rbPackageA.Location = New System.Drawing.Point(6, 24)
+        Me.rbPackageA.Name = "rbPackageA"
+        Me.rbPackageA.Size = New System.Drawing.Size(78, 17)
+        Me.rbPackageA.TabIndex = 1
+        Me.rbPackageA.TabStop = True
+        Me.rbPackageA.Text = "Package A"
+        Me.rbPackageA.UseVisualStyleBackColor = True
         '
-        'RadioButton3
+        'gbDiscount
         '
-        Me.RadioButton3.AutoSize = True
-        Me.RadioButton3.Location = New System.Drawing.Point(6, 70)
-        Me.RadioButton3.Name = "RadioButton3"
-        Me.RadioButton3.Size = New System.Drawing.Size(90, 17)
-        Me.RadioButton3.TabIndex = 3
-        Me.RadioButton3.TabStop = True
-        Me.RadioButton3.Text = "RadioButton3"
-        Me.RadioButton3.UseVisualStyleBackColor = True
+        Me.gbDiscount.Controls.Add(Me.cbNonProfOrg)
+        Me.gbDiscount.Location = New System.Drawing.Point(118, 47)
+        Me.gbDiscount.Name = "gbDiscount"
+        Me.gbDiscount.Size = New System.Drawing.Size(146, 51)
+        Me.gbDiscount.TabIndex = 0
+        Me.gbDiscount.TabStop = False
+        Me.gbDiscount.Text = "Select a Discount"
         '
-        'Button1
+        'cbNonProfOrg
         '
-        Me.Button1.Location = New System.Drawing.Point(181, 165)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 1
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.cbNonProfOrg.AutoSize = True
+        Me.cbNonProfOrg.Location = New System.Drawing.Point(6, 19)
+        Me.cbNonProfOrg.Name = "cbNonProfOrg"
+        Me.cbNonProfOrg.Size = New System.Drawing.Size(131, 17)
+        Me.cbNonProfOrg.TabIndex = 4
+        Me.cbNonProfOrg.Text = "Nonprofit Organization"
+        Me.cbNonProfOrg.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btnExit
         '
-        Me.Button2.Location = New System.Drawing.Point(93, 165)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(82, 23)
-        Me.Button2.TabIndex = 2
-        Me.Button2.Text = "Button2"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnExit.Location = New System.Drawing.Point(181, 165)
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.Size = New System.Drawing.Size(75, 23)
+        Me.btnExit.TabIndex = 1
+        Me.btnExit.Text = "Exit"
+        Me.btnExit.UseVisualStyleBackColor = True
         '
-        'Button3
+        'btnClear
         '
-        Me.Button3.Location = New System.Drawing.Point(12, 165)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
-        Me.Button3.TabIndex = 3
-        Me.Button3.Text = "Button3"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.btnClear.Location = New System.Drawing.Point(93, 165)
+        Me.btnClear.Name = "btnClear"
+        Me.btnClear.Size = New System.Drawing.Size(82, 23)
+        Me.btnClear.TabIndex = 2
+        Me.btnClear.Text = "Clear"
+        Me.btnClear.UseVisualStyleBackColor = True
         '
-        'CheckBox1
+        'btnCalculate
         '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(6, 19)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(131, 17)
-        Me.CheckBox1.TabIndex = 4
-        Me.CheckBox1.Text = "Nonprofit Organization"
-        Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.btnCalculate.Location = New System.Drawing.Point(12, 165)
+        Me.btnCalculate.Name = "btnCalculate"
+        Me.btnCalculate.Size = New System.Drawing.Size(75, 23)
+        Me.btnCalculate.TabIndex = 3
+        Me.btnCalculate.Text = "Calculate"
+        Me.btnCalculate.UseVisualStyleBackColor = True
         '
-        'Label1
+        'lblNbrOfHrsUsed
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 101)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(39, 13)
-        Me.Label1.TabIndex = 4
-        Me.Label1.Text = "Label1"
+        Me.lblNbrOfHrsUsed.AutoSize = True
+        Me.lblNbrOfHrsUsed.Location = New System.Drawing.Point(12, 111)
+        Me.lblNbrOfHrsUsed.Name = "lblNbrOfHrsUsed"
+        Me.lblNbrOfHrsUsed.Size = New System.Drawing.Size(164, 13)
+        Me.lblNbrOfHrsUsed.TabIndex = 4
+        Me.lblNbrOfHrsUsed.Text = "Enter the Number of Hours Used:"
         '
-        'Label2
+        'lblTotalAmountText
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(12, 129)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(39, 13)
-        Me.Label2.TabIndex = 5
-        Me.Label2.Text = "Label2"
+        Me.lblTotalAmountText.AutoSize = True
+        Me.lblTotalAmountText.Location = New System.Drawing.Point(80, 138)
+        Me.lblTotalAmountText.Name = "lblTotalAmountText"
+        Me.lblTotalAmountText.Size = New System.Drawing.Size(96, 13)
+        Me.lblTotalAmountText.TabIndex = 5
+        Me.lblTotalAmountText.Text = "Total Amount Due:"
+        '
+        'txtNbrHrsEntered
+        '
+        Me.txtNbrHrsEntered.Location = New System.Drawing.Point(182, 108)
+        Me.txtNbrHrsEntered.Name = "txtNbrHrsEntered"
+        Me.txtNbrHrsEntered.Size = New System.Drawing.Size(73, 20)
+        Me.txtNbrHrsEntered.TabIndex = 6
+        '
+        'lblTotalAmount
+        '
+        Me.lblTotalAmount.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblTotalAmount.Location = New System.Drawing.Point(182, 137)
+        Me.lblTotalAmount.Name = "lblTotalAmount"
+        Me.lblTotalAmount.Size = New System.Drawing.Size(73, 23)
+        Me.lblTotalAmount.TabIndex = 7
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(268, 198)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.lblTotalAmount)
+        Me.Controls.Add(Me.txtNbrHrsEntered)
+        Me.Controls.Add(Me.lblTotalAmountText)
+        Me.Controls.Add(Me.lblNbrOfHrsUsed)
+        Me.Controls.Add(Me.btnCalculate)
+        Me.Controls.Add(Me.btnClear)
+        Me.Controls.Add(Me.btnExit)
+        Me.Controls.Add(Me.gbSubscriptionPackage)
         Me.Name = "Form1"
         Me.Text = "Form1"
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
+        Me.gbSubscriptionPackage.ResumeLayout(False)
+        Me.gbSubscriptionPackage.PerformLayout()
+        Me.gbDiscount.ResumeLayout(False)
+        Me.gbDiscount.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents RadioButton3 As System.Windows.Forms.RadioButton
-    Friend WithEvents RadioButton2 As System.Windows.Forms.RadioButton
-    Friend WithEvents RadioButton1 As System.Windows.Forms.RadioButton
-    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
-    Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents Button3 As System.Windows.Forms.Button
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents gbSubscriptionPackage As System.Windows.Forms.GroupBox
+    Friend WithEvents rbPackageC As System.Windows.Forms.RadioButton
+    Friend WithEvents rbPackageB As System.Windows.Forms.RadioButton
+    Friend WithEvents rbPackageA As System.Windows.Forms.RadioButton
+    Friend WithEvents gbDiscount As System.Windows.Forms.GroupBox
+    Friend WithEvents cbNonProfOrg As System.Windows.Forms.CheckBox
+    Friend WithEvents btnExit As System.Windows.Forms.Button
+    Friend WithEvents btnClear As System.Windows.Forms.Button
+    Friend WithEvents btnCalculate As System.Windows.Forms.Button
+    Friend WithEvents lblNbrOfHrsUsed As System.Windows.Forms.Label
+    Friend WithEvents lblTotalAmountText As System.Windows.Forms.Label
+    Friend WithEvents txtNbrHrsEntered As System.Windows.Forms.TextBox
+    Friend WithEvents lblTotalAmount As System.Windows.Forms.Label
 
 End Class
