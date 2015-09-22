@@ -12,15 +12,15 @@
         Dim hours As Decimal
 
         'Creates the constants to be used
-        Const hrsInMonth As Decimal = 744
-        Const rateA As Decimal = 9.95
-        Const limitA As Decimal = 10
-        Const extraHrsAcost As Decimal = 2
-        Const rateB As Decimal = 14.95
-        Const limitB As Decimal = 20
-        Const extraHrsBcost As Decimal = 1
-        Const rateC As Decimal = 19.95
-        Const discount As Decimal = 0.2
+        Const hrsInMonth As Decimal = 744D
+        Const rateA As Decimal = 9.95D
+        Const limitA As Decimal = 10D
+        Const extraHrsAcost As Decimal = 2D
+        Const rateB As Decimal = 14.95D
+        Const limitB As Decimal = 20D
+        Const extraHrsBcost As Decimal = 1D
+        Const rateC As Decimal = 19.95D
+        Const discount As Decimal = 0.2D
 
         'First try catch to verify the hours entered are numbers
         Try
