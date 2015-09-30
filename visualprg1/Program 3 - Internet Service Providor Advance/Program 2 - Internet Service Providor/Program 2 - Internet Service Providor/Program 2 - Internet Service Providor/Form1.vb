@@ -27,7 +27,7 @@
             If IsNumeric(CDec(txtNbrHrsEntered.Text)) = False Then
 
                 'Errors on a non valid entry
-                Error 0
+                Error 1
             End If
 
             'Second try catch to verify the hours entered don't exceed 744 hours
@@ -36,7 +36,7 @@
                 If CDec(txtNbrHrsEntered.Text) > hrsInMonth Then
 
                     'Errors to the message box
-                    Error 0
+                    Error 1
                 End If
 
                 'Third try catch to verify a radio button was selected

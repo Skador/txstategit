@@ -10,6 +10,9 @@
         Dim total As Decimal
         Dim subTotal As Decimal
         Dim hours As Decimal
+        Dim calcHoursB As Decimal
+        Dim savingsB As Decimal
+        Dim savingsC As Decimal
 
         'Creates the constants to be used
         Const hrsInMonth As Decimal = 744D
@@ -66,7 +69,7 @@
                     Else
 
                         'Errors if no radio button is selected
-                        Error 1
+                        Error 0
                     End If
                 Catch ex As Exception
 
@@ -81,6 +84,35 @@
                     total = subTotal
                 End If
                 lblTotalAmount.Text = total.ToString("C")
+
+                If cbSavings.Checked = True Then
+                    If rbPackageA.Checked = True Then
+                        If CDec(txtNbrHrsEntered.Text) > limitB Then
+                            calcHoursB = CDec(txtNbrHrsEntered.Text) - limitB
+                        End If
+                        savingsB = ((rateA + ((hours) * extraHrsAcost)) - (rateB + (calcHoursB * extraHrsBcost)))
+                        savingsC = ((rateA + (hours * extraHrsAcost)) - rateC)
+                        If savingsB > 0 And savingsC > 0 Then
+                            lblSavingsShow.Text = "Potential Savings:" + vbNewLine + "Package B: " + savingsB.ToString("C") + vbNewLine + "Package C: " + savingsC.ToString("C")
+                        ElseIf savingsB > 0 And savingsC <= 0 Then
+                            lblSavingsShow.Text = "Potential Savings:" + vbNewLine + "Package B: " + savingsB.ToString("C") + vbNewLine + "Package C: No Savings"
+                        ElseIf savingsB <= 0 And savingsC > 0 Then
+                            lblSavingsShow.Text = "Potential Savings:" + vbNewLine + "Package B: No Savings" + vbNewLine + "Package C: " + savingsC.ToString("C")
+                        Else
+                            lblSavingsShow.Text = "Potential Savings:" + vbNewLine + "Package B: No Savings" + vbNewLine + "Package C: No Savings"
+                        End If
+                    ElseIf rbPackageB.Checked = True Then
+                        savingsC = ((rateB + (hours * extraHrsBcost)) - rateC)
+                        If savingsC > 0 Then
+
+                            lblSavingsShow.Text = "Potential Savings:" + vbNewLine + "Package C: No Savings"
+                        End If
+                    Else
+
+                    End If
+                Else
+                    lblSavingsShow.Text = String.Empty
+                End If
             Catch ex As Exception
 
                 'Shows the error message for entering a numeric value
@@ -108,4 +140,5 @@
         'Resets the Check box
         cbNonProfOrg.Checked = False
     End Sub
+
 End Class
