@@ -90,8 +90,8 @@
                         If CDec(txtNbrHrsEntered.Text) > limitB Then
                             calcHoursB = CDec(txtNbrHrsEntered.Text) - limitB
                         End If
-                        savingsB = ((rateA + ((hours) * extraHrsAcost)) - (rateB + (calcHoursB * extraHrsBcost)))
-                        savingsC = ((rateA + (hours * extraHrsAcost)) - rateC)
+                        savingsB = total - (rateB + (calcHoursB * extraHrsBcost))
+                        savingsC = total - rateC
                         If savingsB > 0 And savingsC > 0 Then
                             lblSavingsShow.Text = "Potential Savings:" + vbNewLine + "Package B: " + savingsB.ToString("C") + vbNewLine + "Package C: " + savingsC.ToString("C")
                         ElseIf savingsB > 0 And savingsC <= 0 Then
@@ -102,13 +102,12 @@
                             lblSavingsShow.Text = "Potential Savings:" + vbNewLine + "Package B: No Savings" + vbNewLine + "Package C: No Savings"
                         End If
                     ElseIf rbPackageB.Checked = True Then
-                        savingsC = ((rateB + (hours * extraHrsBcost)) - rateC)
+                        savingsC = total - rateC
                         If savingsC > 0 Then
-
+                            lblSavingsShow.Text = "Potential Savings:" + vbNewLine + "Package C: " + savingsC.ToString("C")
+                        Else
                             lblSavingsShow.Text = "Potential Savings:" + vbNewLine + "Package C: No Savings"
-                        End If
-                    Else
-
+                            End
                     End If
                 Else
                     lblSavingsShow.Text = String.Empty
@@ -131,6 +130,7 @@
 
         'Clears the label
         lblTotalAmount.Text = String.Empty
+        lblSavingsShow.Text = String.Empty
 
         'Resets the Radio buttons
         rbPackageA.Checked = False
@@ -139,6 +139,7 @@
 
         'Resets the Check box
         cbNonProfOrg.Checked = False
+        cbSavings.Checked = False
     End Sub
 
 End Class
