@@ -85,13 +85,22 @@
                 End If
                 lblTotalAmount.Text = total.ToString("C")
 
+                'Checks to see if the "show savings" option is selected
                 If cbSavings.Checked = True Then
+
+                    'Checks if Package A is selected, if not, moves on
                     If rbPackageA.Checked = True Then
+
+                        'Setting the hours if the user were to have selected "Package B"
                         If CDec(txtNbrHrsEntered.Text) > limitB Then
                             calcHoursB = CDec(txtNbrHrsEntered.Text) - limitB
                         End If
+
+                        'Setting the savings variables used for calculating the overall savings
                         savingsB = total - (rateB + (calcHoursB * extraHrsBcost))
                         savingsC = total - rateC
+
+                        'Runs an if statement to figure out which label text to use
                         If savingsB > 0 And savingsC > 0 Then
                             lblSavingsShow.Text = "Potential Savings:" + vbNewLine + "Package B: " + savingsB.ToString("C") + vbNewLine + "Package C: " + savingsC.ToString("C")
                         ElseIf savingsB > 0 And savingsC <= 0 Then
@@ -101,14 +110,22 @@
                         Else
                             lblSavingsShow.Text = "Potential Savings:" + vbNewLine + "Package B: No Savings" + vbNewLine + "Package C: No Savings"
                         End If
+
+                        'Checks if Package B is selected, if not, moves on
                     ElseIf rbPackageB.Checked = True Then
                         savingsC = total - rateC
                         If savingsC > 0 Then
                             lblSavingsShow.Text = "Potential Savings:" + vbNewLine + "Package C: " + savingsC.ToString("C")
                         Else
                             lblSavingsShow.Text = "Potential Savings:" + vbNewLine + "Package C: No Savings"
-                            End
+                        End If
+
+                        'If Package A or B was not selected, defaults to an empty string
+                    Else
+                        lblSavingsShow.Text = String.Empty
                     End If
+
+                    'Sets the lable to not show if the check wasn't selected
                 Else
                     lblSavingsShow.Text = String.Empty
                 End If
