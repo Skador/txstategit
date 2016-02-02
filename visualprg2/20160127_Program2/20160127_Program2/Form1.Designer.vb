@@ -85,18 +85,18 @@ Partial Class Form1
         '
         Me.Button1.Location = New System.Drawing.Point(334, 46)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.Size = New System.Drawing.Size(88, 23)
         Me.Button1.TabIndex = 6
-        Me.Button1.Text = "Button1"
+        Me.Button1.Text = "Save To File"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
         '
         Me.Button2.Location = New System.Drawing.Point(334, 112)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.Size = New System.Drawing.Size(88, 23)
         Me.Button2.TabIndex = 7
-        Me.Button2.Text = "Button2"
+        Me.Button2.Text = "Read From File"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'ListBox1
@@ -104,7 +104,7 @@ Partial Class Form1
         Me.ListBox1.FormattingEnabled = True
         Me.ListBox1.Location = New System.Drawing.Point(67, 237)
         Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(342, 95)
+        Me.ListBox1.Size = New System.Drawing.Size(355, 95)
         Me.ListBox1.TabIndex = 8
         '
         'Form1
