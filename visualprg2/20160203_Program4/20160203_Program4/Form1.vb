@@ -18,9 +18,17 @@
         Next
         ListBox1.Items.AddRange(drinks)
 
+        'This creates a button dynamically at run time.
         Dim btn1 As New Button
         btn1.Text = "Purchase"
+        btn1.BackColor = Color.Yellow
+        btn1.Height = 30
+        btn1.Width = 100
+
         FlowLayoutPanel1.Controls.Add(btn1)
+
+        AddHandler btn1.Click, AddressOf btn1_Click
+
     End Sub
 
     Private Sub ListBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListBox1.SelectedIndexChanged
@@ -28,4 +36,9 @@
         'Dim aDrink As DrinkType = ListBox1.SelectedItem
         Label2.Text = aDrink.Price.ToString("c")
     End Sub
+
+    Private Sub btn1_Click(sender As Object, e As EventArgs)
+        MsgBox("Ha ha ha")
+    End Sub
+
 End Class
