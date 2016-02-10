@@ -13,5 +13,37 @@
         myStudentList.Add(New Student(2, "Carol", 3.0))
         myStudentList.Add(New Student(3, "Michael", 2.0))
 
+        'myStudentList.Sort(AddressOf CompareID)
+
+        'For Each item In myStudentList
+        '    ListBox1.Items.Add(item)
+        'Next
+
+        myStudentList.Sort(AddressOf CompareName)
+
+        For Each item In myStudentList
+            ListBox1.Items.Add(item)
+        Next
+
+        'myStudentList.Sort(AddressOf CompareGPA)
+
+        'For Each item In myStudentList
+        '    ListBox1.Items.Add(item)
+        'Next
+
+
     End Sub
+
+    Public Function CompareID(ByVal x As Student, ByVal y As Student)
+        Return x.studID.CompareTo(y.studID)
+    End Function
+
+
+    Public Function CompareName(ByVal x As Student, ByVal y As Student)
+        Return x.lastName.CompareTo(y.lastName)
+    End Function
+
+    Public Function CompareGPA(ByVal x As Student, ByVal y As Student)
+        Return x.studGPA.CompareTo(y.studGPA)
+    End Function
 End Class
