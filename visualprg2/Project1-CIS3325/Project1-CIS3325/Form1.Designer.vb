@@ -29,16 +29,16 @@ Partial Class Form1
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.MonthlySalaryLbl = New System.Windows.Forms.Label()
+        Me.FirstNameTxt = New System.Windows.Forms.TextBox()
+        Me.LastNameTxt = New System.Windows.Forms.TextBox()
+        Me.NoOfWeekTxt = New System.Windows.Forms.TextBox()
+        Me.WeeklyHoursTxt = New System.Windows.Forms.TextBox()
+        Me.SalaryPerHourTxt = New System.Windows.Forms.TextBox()
+        Me.MonthsOfPaymentTxt = New System.Windows.Forms.TextBox()
+        Me.SaveBtn = New System.Windows.Forms.Button()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
+        Me.YearlySalaryLbl = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label1
@@ -104,64 +104,64 @@ Partial Class Form1
         Me.Label7.TabIndex = 6
         Me.Label7.Text = "Months of Payment"
         '
-        'Label8
+        'MonthlySalaryLbl
         '
-        Me.Label8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label8.Location = New System.Drawing.Point(279, 342)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(185, 32)
-        Me.Label8.TabIndex = 7
+        Me.MonthlySalaryLbl.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.MonthlySalaryLbl.Location = New System.Drawing.Point(279, 342)
+        Me.MonthlySalaryLbl.Name = "MonthlySalaryLbl"
+        Me.MonthlySalaryLbl.Size = New System.Drawing.Size(185, 32)
+        Me.MonthlySalaryLbl.TabIndex = 7
         '
-        'TextBox1
+        'FirstNameTxt
         '
-        Me.TextBox1.Location = New System.Drawing.Point(279, 70)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(185, 29)
-        Me.TextBox1.TabIndex = 8
+        Me.FirstNameTxt.Location = New System.Drawing.Point(279, 70)
+        Me.FirstNameTxt.Name = "FirstNameTxt"
+        Me.FirstNameTxt.Size = New System.Drawing.Size(185, 29)
+        Me.FirstNameTxt.TabIndex = 8
         '
-        'TextBox2
+        'LastNameTxt
         '
-        Me.TextBox2.Location = New System.Drawing.Point(279, 124)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(185, 29)
-        Me.TextBox2.TabIndex = 9
+        Me.LastNameTxt.Location = New System.Drawing.Point(279, 124)
+        Me.LastNameTxt.Name = "LastNameTxt"
+        Me.LastNameTxt.Size = New System.Drawing.Size(185, 29)
+        Me.LastNameTxt.TabIndex = 9
         '
-        'TextBox3
+        'NoOfWeekTxt
         '
-        Me.TextBox3.Location = New System.Drawing.Point(279, 178)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(185, 29)
-        Me.TextBox3.TabIndex = 10
+        Me.NoOfWeekTxt.Location = New System.Drawing.Point(279, 178)
+        Me.NoOfWeekTxt.Name = "NoOfWeekTxt"
+        Me.NoOfWeekTxt.Size = New System.Drawing.Size(185, 29)
+        Me.NoOfWeekTxt.TabIndex = 10
         '
-        'TextBox4
+        'WeeklyHoursTxt
         '
-        Me.TextBox4.Location = New System.Drawing.Point(279, 232)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(185, 29)
-        Me.TextBox4.TabIndex = 11
+        Me.WeeklyHoursTxt.Location = New System.Drawing.Point(279, 232)
+        Me.WeeklyHoursTxt.Name = "WeeklyHoursTxt"
+        Me.WeeklyHoursTxt.Size = New System.Drawing.Size(185, 29)
+        Me.WeeklyHoursTxt.TabIndex = 11
         '
-        'TextBox5
+        'SalaryPerHourTxt
         '
-        Me.TextBox5.Location = New System.Drawing.Point(279, 286)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(185, 29)
-        Me.TextBox5.TabIndex = 12
+        Me.SalaryPerHourTxt.Location = New System.Drawing.Point(279, 286)
+        Me.SalaryPerHourTxt.Name = "SalaryPerHourTxt"
+        Me.SalaryPerHourTxt.Size = New System.Drawing.Size(185, 29)
+        Me.SalaryPerHourTxt.TabIndex = 12
         '
-        'TextBox6
+        'MonthsOfPaymentTxt
         '
-        Me.TextBox6.Location = New System.Drawing.Point(279, 394)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(185, 29)
-        Me.TextBox6.TabIndex = 13
+        Me.MonthsOfPaymentTxt.Location = New System.Drawing.Point(279, 394)
+        Me.MonthsOfPaymentTxt.Name = "MonthsOfPaymentTxt"
+        Me.MonthsOfPaymentTxt.Size = New System.Drawing.Size(185, 29)
+        Me.MonthsOfPaymentTxt.TabIndex = 13
         '
-        'Button1
+        'SaveBtn
         '
-        Me.Button1.Location = New System.Drawing.Point(540, 169)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(113, 39)
-        Me.Button1.TabIndex = 14
-        Me.Button1.Text = "Save"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.SaveBtn.Location = New System.Drawing.Point(540, 169)
+        Me.SaveBtn.Name = "SaveBtn"
+        Me.SaveBtn.Size = New System.Drawing.Size(113, 39)
+        Me.SaveBtn.TabIndex = 14
+        Me.SaveBtn.Text = "Save"
+        Me.SaveBtn.UseVisualStyleBackColor = True
         '
         'Label9
         '
@@ -172,29 +172,29 @@ Partial Class Form1
         Me.Label9.TabIndex = 15
         Me.Label9.Text = "Yearly Salary"
         '
-        'Label10
+        'YearlySalaryLbl
         '
-        Me.Label10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label10.Location = New System.Drawing.Point(504, 277)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(185, 32)
-        Me.Label10.TabIndex = 16
+        Me.YearlySalaryLbl.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.YearlySalaryLbl.Location = New System.Drawing.Point(504, 277)
+        Me.YearlySalaryLbl.Name = "YearlySalaryLbl"
+        Me.YearlySalaryLbl.Size = New System.Drawing.Size(185, 32)
+        Me.YearlySalaryLbl.TabIndex = 16
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(744, 517)
-        Me.Controls.Add(Me.Label10)
+        Me.Controls.Add(Me.YearlySalaryLbl)
         Me.Controls.Add(Me.Label9)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.TextBox6)
-        Me.Controls.Add(Me.TextBox5)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.SaveBtn)
+        Me.Controls.Add(Me.MonthsOfPaymentTxt)
+        Me.Controls.Add(Me.SalaryPerHourTxt)
+        Me.Controls.Add(Me.WeeklyHoursTxt)
+        Me.Controls.Add(Me.NoOfWeekTxt)
+        Me.Controls.Add(Me.LastNameTxt)
+        Me.Controls.Add(Me.FirstNameTxt)
+        Me.Controls.Add(Me.MonthlySalaryLbl)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
@@ -202,7 +202,7 @@ Partial Class Form1
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.Margin = New System.Windows.Forms.Padding(6)
         Me.Name = "Form1"
         Me.Text = "Form1"
         Me.ResumeLayout(False)
@@ -216,15 +216,15 @@ Partial Class Form1
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label
-    Friend WithEvents Label8 As System.Windows.Forms.Label
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox6 As System.Windows.Forms.TextBox
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents MonthlySalaryLbl As System.Windows.Forms.Label
+    Friend WithEvents FirstNameTxt As System.Windows.Forms.TextBox
+    Friend WithEvents LastNameTxt As System.Windows.Forms.TextBox
+    Friend WithEvents NoOfWeekTxt As System.Windows.Forms.TextBox
+    Friend WithEvents WeeklyHoursTxt As System.Windows.Forms.TextBox
+    Friend WithEvents SalaryPerHourTxt As System.Windows.Forms.TextBox
+    Friend WithEvents MonthsOfPaymentTxt As System.Windows.Forms.TextBox
+    Friend WithEvents SaveBtn As System.Windows.Forms.Button
     Friend WithEvents Label9 As System.Windows.Forms.Label
-    Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents YearlySalaryLbl As System.Windows.Forms.Label
 
 End Class

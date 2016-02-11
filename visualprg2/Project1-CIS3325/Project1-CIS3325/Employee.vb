@@ -51,20 +51,20 @@
         End Set
     End Property
 
-    Public Function SalaryMonthly() As Double
-        Dim monthlySalary As Double
+    Public Function monthlySalary() As Double
+        Dim SalaryMonthly As Double
 
-        monthlySalary = NoOfWeeks * WeeklyHours * salarPerHour
+        SalaryMonthly = NoOfWeeks * WeeklyHours * salarPerHour
 
         Return monthlySalary
     End Function
 
-    Public Function SalaryYearly() As Double
-        Dim yearlySalary As Double
+    Public Function yearlySalary() As Double
+        Dim SalaryYearly As Double
 
-        yearlySalary = SalaryMonthly() * monthsOfPayments
+        SalaryYearly = monthlySalary() * monthsOfPayments
 
-        Return yearlySalary
+        Return SalaryYearly
     End Function
 
 End Class
