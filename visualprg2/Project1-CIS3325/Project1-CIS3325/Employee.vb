@@ -3,8 +3,6 @@
     Public Property firstName As String
     Public Property lastName As String
     Public Property salarPerHour As Double
-    Public Property monthlySalary As Double
-    Public Property yearlySalary As Double
 
     Private numberofweeks As Integer
     Private hoursweekly As Integer
@@ -46,12 +44,27 @@
         End Get
         Set(ByVal value As Integer)
             If value > 12 Then
-                MsgBox("Please enter a value of 1 or greater for the number of hours worked weekly.")
+                MsgBox("Error: Number of months is higher than 12.")
             Else
-                hoursweekly = WeeklyHours
+                monthspayment = monthsOfPayments
             End If
         End Set
     End Property
-   
+
+    Public Function SalaryMonthly() As Double
+        Dim monthlySalary As Double
+
+        monthlySalary = NoOfWeeks * WeeklyHours * salarPerHour
+
+        Return monthlySalary
+    End Function
+
+    Public Function SalaryYearly() As Double
+        Dim yearlySalary As Double
+
+        yearlySalary = SalaryMonthly() * monthsOfPayments
+
+        Return yearlySalary
+    End Function
 
 End Class
