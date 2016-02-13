@@ -1,0 +1,9 @@
+First Name: Test
+Last Name: Employee
+Number of Weeks Worked: 4
+Weekly Hours: 4
+Salary per Hour: $4.00
+Monthly Salary: $64.00
+Months of Payment: 4
+Yearly Salary: $256.00
+

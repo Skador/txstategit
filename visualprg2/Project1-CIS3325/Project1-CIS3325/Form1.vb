@@ -46,13 +46,13 @@ Public Class Form1
         Try
             If IsNumeric(CDec(NoOfWeekTxt.Text)) = True Then
                 If CDec(NoOfWeekTxt.Text) < 1 Or CDec(NoOfWeekTxt.Text) > 4 Then
-                    MsgBox("Please enter an interger between the values of 1 and 4.")
+                    MsgBox("Please enter an integer between the values of 1 and 4.")
                     NoOfWeekTxt.Focus()
                 End If
             End If
             
         Catch ex As Exception
-            MsgBox("Please only enter integers")
+            MsgBox("Please only enter integers.")
             NoOfWeekTxt.Focus()
         End Try
     End Sub
@@ -61,12 +61,12 @@ Public Class Form1
           Try
             If IsNumeric(CDec(WeeklyHoursTxt.Text)) = True Then
                 If CDec(WeeklyHoursTxt.Text) < 1 Or CDec(WeeklyHoursTxt.Text) > 40 Then
-                    MsgBox("Please enter an interger between the values of 1 and 40.")
+                    MsgBox("Please enter an integer between the values of 1 and 40.")
                     WeeklyHoursTxt.Focus()
                 End If
             End If
         Catch ex As Exception
-            MsgBox("Please only enter integers")
+            MsgBox("Please only enter integers.")
             WeeklyHoursTxt.Focus()
         End Try
     End Sub
@@ -85,12 +85,12 @@ Public Class Form1
         Try
             If IsNumeric(CDec(MonthsOfPaymentTxt.Text)) = True Then
                 If CDec(MonthsOfPaymentTxt.Text) < 1 Or CDec(MonthsOfPaymentTxt.Text) > 12 Then
-                    MsgBox("Please enter an interger between the values of 1 and 12.")
+                    MsgBox("Please enter an integer between the values of 1 and 12.")
                     MonthsOfPaymentTxt.Focus()
                 End If
             End If
         Catch ex As Exception
-            MsgBox("Please only enter integers")
+            MsgBox("Please only enter integers.")
             MonthsOfPaymentTxt.Focus()
         End Try
     End Sub
