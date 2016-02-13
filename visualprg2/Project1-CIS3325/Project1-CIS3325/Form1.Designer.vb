@@ -44,121 +44,136 @@ Partial Class Form1
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(137, 73)
+        Me.Label1.Location = New System.Drawing.Point(75, 40)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(106, 25)
+        Me.Label1.Size = New System.Drawing.Size(57, 13)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "First Name"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(137, 127)
+        Me.Label2.Location = New System.Drawing.Point(75, 69)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(106, 25)
+        Me.Label2.Size = New System.Drawing.Size(58, 13)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Last Name"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(118, 181)
+        Me.Label3.Location = New System.Drawing.Point(64, 98)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(125, 25)
+        Me.Label3.Size = New System.Drawing.Size(70, 13)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "No of Weeks"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(108, 235)
+        Me.Label4.Location = New System.Drawing.Point(59, 127)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(135, 25)
+        Me.Label4.Size = New System.Drawing.Size(74, 13)
         Me.Label4.TabIndex = 3
         Me.Label4.Text = "Weekly Hours"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(95, 289)
+        Me.Label5.Location = New System.Drawing.Point(52, 157)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(148, 25)
+        Me.Label5.Size = New System.Drawing.Size(80, 13)
         Me.Label5.TabIndex = 4
         Me.Label5.Text = "Salary per Hour"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(101, 343)
+        Me.Label6.Location = New System.Drawing.Point(55, 186)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(142, 25)
+        Me.Label6.Size = New System.Drawing.Size(76, 13)
         Me.Label6.TabIndex = 5
         Me.Label6.Text = "Monthly Salary"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(63, 397)
+        Me.Label7.Location = New System.Drawing.Point(34, 215)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(180, 25)
+        Me.Label7.Size = New System.Drawing.Size(98, 13)
         Me.Label7.TabIndex = 6
         Me.Label7.Text = "Months of Payment"
         '
         'MonthlySalaryLbl
         '
         Me.MonthlySalaryLbl.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.MonthlySalaryLbl.Location = New System.Drawing.Point(279, 342)
+        Me.MonthlySalaryLbl.Location = New System.Drawing.Point(152, 185)
+        Me.MonthlySalaryLbl.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.MonthlySalaryLbl.Name = "MonthlySalaryLbl"
-        Me.MonthlySalaryLbl.Size = New System.Drawing.Size(185, 32)
+        Me.MonthlySalaryLbl.Size = New System.Drawing.Size(101, 17)
         Me.MonthlySalaryLbl.TabIndex = 7
         '
         'FirstNameTxt
         '
-        Me.FirstNameTxt.Location = New System.Drawing.Point(279, 70)
+        Me.FirstNameTxt.Location = New System.Drawing.Point(152, 38)
+        Me.FirstNameTxt.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.FirstNameTxt.Name = "FirstNameTxt"
-        Me.FirstNameTxt.Size = New System.Drawing.Size(185, 29)
+        Me.FirstNameTxt.Size = New System.Drawing.Size(103, 20)
         Me.FirstNameTxt.TabIndex = 8
         '
         'LastNameTxt
         '
-        Me.LastNameTxt.Location = New System.Drawing.Point(279, 124)
+        Me.LastNameTxt.Location = New System.Drawing.Point(152, 67)
+        Me.LastNameTxt.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.LastNameTxt.Name = "LastNameTxt"
-        Me.LastNameTxt.Size = New System.Drawing.Size(185, 29)
+        Me.LastNameTxt.Size = New System.Drawing.Size(103, 20)
         Me.LastNameTxt.TabIndex = 9
         '
         'NoOfWeekTxt
         '
-        Me.NoOfWeekTxt.Location = New System.Drawing.Point(279, 178)
+        Me.NoOfWeekTxt.Location = New System.Drawing.Point(152, 96)
+        Me.NoOfWeekTxt.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.NoOfWeekTxt.Name = "NoOfWeekTxt"
-        Me.NoOfWeekTxt.Size = New System.Drawing.Size(185, 29)
+        Me.NoOfWeekTxt.Size = New System.Drawing.Size(103, 20)
         Me.NoOfWeekTxt.TabIndex = 10
         '
         'WeeklyHoursTxt
         '
-        Me.WeeklyHoursTxt.Location = New System.Drawing.Point(279, 232)
+        Me.WeeklyHoursTxt.Location = New System.Drawing.Point(152, 126)
+        Me.WeeklyHoursTxt.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.WeeklyHoursTxt.Name = "WeeklyHoursTxt"
-        Me.WeeklyHoursTxt.Size = New System.Drawing.Size(185, 29)
+        Me.WeeklyHoursTxt.Size = New System.Drawing.Size(103, 20)
         Me.WeeklyHoursTxt.TabIndex = 11
         '
         'SalaryPerHourTxt
         '
-        Me.SalaryPerHourTxt.Location = New System.Drawing.Point(279, 286)
+        Me.SalaryPerHourTxt.Location = New System.Drawing.Point(152, 155)
+        Me.SalaryPerHourTxt.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.SalaryPerHourTxt.Name = "SalaryPerHourTxt"
-        Me.SalaryPerHourTxt.Size = New System.Drawing.Size(185, 29)
+        Me.SalaryPerHourTxt.Size = New System.Drawing.Size(103, 20)
         Me.SalaryPerHourTxt.TabIndex = 12
         '
         'MonthsOfPaymentTxt
         '
-        Me.MonthsOfPaymentTxt.Location = New System.Drawing.Point(279, 394)
+        Me.MonthsOfPaymentTxt.Location = New System.Drawing.Point(152, 213)
+        Me.MonthsOfPaymentTxt.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.MonthsOfPaymentTxt.Name = "MonthsOfPaymentTxt"
-        Me.MonthsOfPaymentTxt.Size = New System.Drawing.Size(185, 29)
+        Me.MonthsOfPaymentTxt.Size = New System.Drawing.Size(103, 20)
         Me.MonthsOfPaymentTxt.TabIndex = 13
         '
         'SaveBtn
         '
-        Me.SaveBtn.Location = New System.Drawing.Point(540, 169)
+        Me.SaveBtn.Location = New System.Drawing.Point(295, 92)
+        Me.SaveBtn.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.SaveBtn.Name = "SaveBtn"
-        Me.SaveBtn.Size = New System.Drawing.Size(113, 39)
+        Me.SaveBtn.Size = New System.Drawing.Size(62, 21)
         Me.SaveBtn.TabIndex = 14
         Me.SaveBtn.Text = "Save"
         Me.SaveBtn.UseVisualStyleBackColor = True
@@ -166,25 +181,27 @@ Partial Class Form1
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(532, 230)
+        Me.Label9.Location = New System.Drawing.Point(290, 125)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(128, 25)
+        Me.Label9.Size = New System.Drawing.Size(68, 13)
         Me.Label9.TabIndex = 15
         Me.Label9.Text = "Yearly Salary"
         '
         'YearlySalaryLbl
         '
         Me.YearlySalaryLbl.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.YearlySalaryLbl.Location = New System.Drawing.Point(504, 277)
+        Me.YearlySalaryLbl.Location = New System.Drawing.Point(275, 150)
+        Me.YearlySalaryLbl.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.YearlySalaryLbl.Name = "YearlySalaryLbl"
-        Me.YearlySalaryLbl.Size = New System.Drawing.Size(185, 32)
+        Me.YearlySalaryLbl.Size = New System.Drawing.Size(101, 17)
         Me.YearlySalaryLbl.TabIndex = 16
         '
         'Form1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(744, 517)
+        Me.ClientSize = New System.Drawing.Size(390, 280)
         Me.Controls.Add(Me.YearlySalaryLbl)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.SaveBtn)
@@ -202,7 +219,6 @@ Partial Class Form1
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Margin = New System.Windows.Forms.Padding(6)
         Me.Name = "Form1"
         Me.Text = "Form1"
         Me.ResumeLayout(False)
