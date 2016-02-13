@@ -33,7 +33,7 @@
             ElseIf value > 40 Then
                 MsgBox("Please enter a value of 40 or less for the number of hours worked weekly.")
             Else
-                hoursweekly = WeeklyHours
+                hoursweekly = value
             End If
         End Set
     End Property
@@ -46,7 +46,7 @@
             If value > 12 Then
                 MsgBox("Error: Number of months is higher than 12.")
             Else
-                monthspayment = monthsOfPayments
+                monthspayment = value
             End If
         End Set
     End Property
@@ -54,9 +54,9 @@
     Public Function monthlySalary() As Double
         Dim SalaryMonthly As Double
 
-        SalaryMonthly = NoOfWeeks * WeeklyHours * salarPerHour
+        SalaryMonthly = numberofweeks * hoursweekly * salarPerHour
 
-        Return monthlySalary
+        Return SalaryMonthly
     End Function
 
     Public Function yearlySalary() As Double
