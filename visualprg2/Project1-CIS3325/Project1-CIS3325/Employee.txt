@@ -1,9 +1,0 @@
-First Name: Test
-Last Name: Employee
-Number of Weeks Worked: 3
-Weekly Hours: 4
-Salary per Hour: 1
-Monthly Salary: $12.00
-Months of Payment: 2
-Yearly Salary: $24.00
-
