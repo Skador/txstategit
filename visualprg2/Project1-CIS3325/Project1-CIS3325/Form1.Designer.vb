@@ -123,7 +123,7 @@ Partial Class Form1
         'FirstNameTxt
         '
         Me.FirstNameTxt.Location = New System.Drawing.Point(152, 38)
-        Me.FirstNameTxt.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.FirstNameTxt.Margin = New System.Windows.Forms.Padding(2)
         Me.FirstNameTxt.Name = "FirstNameTxt"
         Me.FirstNameTxt.Size = New System.Drawing.Size(103, 20)
         Me.FirstNameTxt.TabIndex = 8
@@ -131,7 +131,7 @@ Partial Class Form1
         'LastNameTxt
         '
         Me.LastNameTxt.Location = New System.Drawing.Point(152, 67)
-        Me.LastNameTxt.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.LastNameTxt.Margin = New System.Windows.Forms.Padding(2)
         Me.LastNameTxt.Name = "LastNameTxt"
         Me.LastNameTxt.Size = New System.Drawing.Size(103, 20)
         Me.LastNameTxt.TabIndex = 9
@@ -139,7 +139,7 @@ Partial Class Form1
         'NoOfWeekTxt
         '
         Me.NoOfWeekTxt.Location = New System.Drawing.Point(152, 96)
-        Me.NoOfWeekTxt.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.NoOfWeekTxt.Margin = New System.Windows.Forms.Padding(2)
         Me.NoOfWeekTxt.Name = "NoOfWeekTxt"
         Me.NoOfWeekTxt.Size = New System.Drawing.Size(103, 20)
         Me.NoOfWeekTxt.TabIndex = 10
@@ -147,7 +147,7 @@ Partial Class Form1
         'WeeklyHoursTxt
         '
         Me.WeeklyHoursTxt.Location = New System.Drawing.Point(152, 126)
-        Me.WeeklyHoursTxt.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.WeeklyHoursTxt.Margin = New System.Windows.Forms.Padding(2)
         Me.WeeklyHoursTxt.Name = "WeeklyHoursTxt"
         Me.WeeklyHoursTxt.Size = New System.Drawing.Size(103, 20)
         Me.WeeklyHoursTxt.TabIndex = 11
@@ -155,7 +155,7 @@ Partial Class Form1
         'SalaryPerHourTxt
         '
         Me.SalaryPerHourTxt.Location = New System.Drawing.Point(152, 155)
-        Me.SalaryPerHourTxt.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.SalaryPerHourTxt.Margin = New System.Windows.Forms.Padding(2)
         Me.SalaryPerHourTxt.Name = "SalaryPerHourTxt"
         Me.SalaryPerHourTxt.Size = New System.Drawing.Size(103, 20)
         Me.SalaryPerHourTxt.TabIndex = 12
@@ -163,7 +163,7 @@ Partial Class Form1
         'MonthsOfPaymentTxt
         '
         Me.MonthsOfPaymentTxt.Location = New System.Drawing.Point(152, 213)
-        Me.MonthsOfPaymentTxt.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.MonthsOfPaymentTxt.Margin = New System.Windows.Forms.Padding(2)
         Me.MonthsOfPaymentTxt.Name = "MonthsOfPaymentTxt"
         Me.MonthsOfPaymentTxt.Size = New System.Drawing.Size(103, 20)
         Me.MonthsOfPaymentTxt.TabIndex = 13
@@ -171,7 +171,7 @@ Partial Class Form1
         'SaveBtn
         '
         Me.SaveBtn.Location = New System.Drawing.Point(295, 92)
-        Me.SaveBtn.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.SaveBtn.Margin = New System.Windows.Forms.Padding(2)
         Me.SaveBtn.Name = "SaveBtn"
         Me.SaveBtn.Size = New System.Drawing.Size(62, 21)
         Me.SaveBtn.TabIndex = 14
