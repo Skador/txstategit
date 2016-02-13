@@ -1,4 +1,9 @@
-﻿Imports System.IO
+﻿'CIS 3325 Project #1
+'Completed by:
+'Cody Kern
+'Luke Whaley
+
+Imports System.IO
 Public Class Form1
     Dim writeFile As StreamWriter
     Dim Wage As Integer
