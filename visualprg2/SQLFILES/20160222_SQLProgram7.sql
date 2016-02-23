@@ -14,3 +14,4 @@ DELETE FROM Student WHERE StudentID=3
 
 DELETE FROM Student WHERE StudentID=2
 
+SELECT * FROM Student WHERE StuFirstName='Mary'
