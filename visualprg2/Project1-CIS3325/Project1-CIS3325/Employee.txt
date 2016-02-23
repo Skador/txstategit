@@ -1,0 +1,9 @@
+First Name: Cody
+Last Name: Kern
+Number of Weeks Worked: 4
+Weekly Hours: 34
+Salary per Hour: $16.00
+Monthly Salary: $2,173.28
+Months of Payment: 12
+Yearly Salary: $26,079.36
+
