@@ -2,13 +2,15 @@
 Imports System.Data.SqlClient
 
 Public Class Form1
-    Dim myConS As String = "Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True"
-    Dim myConn As New SqlConnection(myConS)
+    Dim myConn As SqlConnection = StudentConDB.GetConnection
     Dim myDA As New SqlDataAdapter
     Dim myDS As New DataSet
     Dim myBDS As New BindingSource
+    Dim Stud As New Student
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Stud.TotalFee()
+
         myDA.SelectCommand = New SqlCommand("select * from STUDENT", myConn)
         myDA.Fill(myDS, "STUDENT")
         DataGridView1.DataSource = myDS
@@ -41,9 +43,11 @@ Public Class Form1
         Label5.Visible = False
         Button3.Visible = False
         TextBox4.Visible = False
+
     End Sub
 
     Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
+
         If CheckBox1.Checked = False Then
             DataGridView1.Visible = False
             Button4.Visible = False
@@ -124,21 +128,19 @@ Public Class Form1
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
-        'myDA.InsertCommand = New SqlCommand("insert into STUDENT(StudentID, Name, Type, NoOfCourses) values (@StudentID, @Name, @Type, @NoOfCourses)", myConn)
+        myDA.InsertCommand = New SqlCommand("insert into STUDENT(StudentID, Name, Type, NoOfCourses) values (@StudentID, @Name, @Type, @NoOfCourses)", myConn)
 
-        'myDA.InsertCommand.Parameters.Add("@StudentID", SqlDbType.BigInt).Value = CInt(TextBox1.Text)
-        'myDA.InsertCommand.Parameters.Add("@Name", SqlDbType.VarChar).Value = TextBox2.Text
-        'myDA.InsertCommand.Parameters.Add("@Type", SqlDbType.VarChar).Value = ComboBox1.Text
-        'myDA.InsertCommand.Parameters.Add("@NoOfCourses", SqlDbType.BigInt).Value = CInt(TextBox3.Text)
+        myDA.InsertCommand.Parameters.Add("@StudentID", SqlDbType.BigInt).Value = CInt(TextBox1.Text)
+        myDA.InsertCommand.Parameters.Add("@Name", SqlDbType.VarChar).Value = TextBox2.Text
+        myDA.InsertCommand.Parameters.Add("@Type", SqlDbType.VarChar).Value = ComboBox1.Text
+        myDA.InsertCommand.Parameters.Add("@NoOfCourses", SqlDbType.BigInt).Value = CInt(TextBox3.Text)
 
-        'myConn.Open()
-        'myDA.InsertCommand.ExecuteNonQuery()
-        'myConn.Close()
+        myConn.Open()
+        myDA.InsertCommand.ExecuteNonQuery()
+        myConn.Close()
 
-        'myDS.Clear()
-        'myDA.Fill(myDS, "STUDENT")
-        Dim connection As New StudentConDB()
-        connection.InsertDB(TextBox1.Text, TextBox2.Text, ComboBox1.Text, TextBox3.Text, myDA)
+        myDS.Clear()
+        myDA.Fill(myDS, "STUDENT")
 
     End Sub
 
