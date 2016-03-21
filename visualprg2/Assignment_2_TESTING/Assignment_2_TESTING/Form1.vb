@@ -1,5 +1,6 @@
 ﻿Imports System.Data
 Imports System.Data.SqlClient
+
 Public Class Form1
     Dim myConS As String = "Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True"
     Dim myConn As New SqlConnection(myConS)
@@ -122,19 +123,23 @@ Public Class Form1
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        myDA.InsertCommand = New SqlCommand("insert into STUDENT(StudentID, Name, Type, NoOfCourses) values (@StudentID, @Name, @Type, @NoOfCourses)", myConn)
 
-        myDA.InsertCommand.Parameters.Add("@StudentID", SqlDbType.BigInt).Value = CInt(TextBox1.Text)
-        myDA.InsertCommand.Parameters.Add("@Name", SqlDbType.VarChar).Value = TextBox2.Text
-        myDA.InsertCommand.Parameters.Add("@Type", SqlDbType.VarChar).Value = ComboBox1.Text
-        myDA.InsertCommand.Parameters.Add("@NoOfCourses", SqlDbType.BigInt).Value = CInt(TextBox3.Text)
+        'myDA.InsertCommand = New SqlCommand("insert into STUDENT(StudentID, Name, Type, NoOfCourses) values (@StudentID, @Name, @Type, @NoOfCourses)", myConn)
 
-        myConn.Open()
-        myDA.InsertCommand.ExecuteNonQuery()
-        myConn.Close()
+        'myDA.InsertCommand.Parameters.Add("@StudentID", SqlDbType.BigInt).Value = CInt(TextBox1.Text)
+        'myDA.InsertCommand.Parameters.Add("@Name", SqlDbType.VarChar).Value = TextBox2.Text
+        'myDA.InsertCommand.Parameters.Add("@Type", SqlDbType.VarChar).Value = ComboBox1.Text
+        'myDA.InsertCommand.Parameters.Add("@NoOfCourses", SqlDbType.BigInt).Value = CInt(TextBox3.Text)
 
-        myDS.Clear()
-        myDA.Fill(myDS, "STUDENT")
+        'myConn.Open()
+        'myDA.InsertCommand.ExecuteNonQuery()
+        'myConn.Close()
+
+        'myDS.Clear()
+        'myDA.Fill(myDS, "STUDENT")
+        Dim connection As New StudentConDB()
+        connection.InsertDB(TextBox1.Text, TextBox2.Text, ComboBox1.Text, TextBox3.Text, myDA)
+
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click

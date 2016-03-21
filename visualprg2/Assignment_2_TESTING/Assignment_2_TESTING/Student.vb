@@ -1,3 +1,3 @@
-﻿Public Class student
+﻿Public Class Student
 
 End Class
