@@ -1,6 +1,6 @@
-﻿Imports DepartmentDLL.Class1
+﻿Imports DeptDLL.TotalFees
 Public Class Student
-    Dim Calculate As New DepartmentDLL.Class1
+    Dim Calculate As New DeptDLL.TotalFees
     Dim Started As Boolean = False
     Public Function TotalFee() As Integer
         Try
@@ -11,16 +11,24 @@ Public Class Student
 
             For Each row As DataGridViewRow In Form1.DataGridView1.Rows
 
+                Dim Classification As Integer
+                If Not String.IsNullOrEmpty(row.Cells(2).Value) Then
+                    Classification = convert(row.Cells(2).Value)
+                    Dim Count As Integer = row.Cells(3).Value
+                    Dim Fee As Integer
+                    Fee = Calculate.TotalFees(Classification, Count)
+                    row.Cells(4).Value = Fee
+                Else
+                    Return TotalFee
+                End If
+                'Dim Count As Integer = row.Cells(3).Value
+                'Dim Move As Integer
+                'Dim Fee As Integer
+                'Fee = Calculate.TotalFees(Classification, Count)
+                ''MsgBox(Fee)
+                'row.Cells(4).Value = Fee
 
-                Dim Type1 As Integer = convert(row.Cells(2).Value)
-                Dim Count As Integer = row.Cells(3).Value
-                Dim Move As Integer
-                Dim Fee As Integer
-                Fee = Calculate.TotalFees(Type1, Count)
-                MsgBox(Fee)
-                row.Cells(4).Value = Fee
-
-                Move = Move + 1
+                'Move = Move + 1
             Next
         Catch
         End Try
@@ -28,15 +36,15 @@ Public Class Student
     End Function
 
     Private Function convert(x As String)
-        MsgBox(x)
+        'MsgBox(x)
         Select Case x
             Case "Graduate"
                 Return 0
             Case "Undergraduate"
                 Return 1
             Case Else
-                Return MsgBox("Students of type Undergraduate or Graduate do not exist, please check your database for errors.")
-
+                MsgBox("Students of type Undergraduate or Graduate do not exist, please check your database for errors.")
+                Return 2
         End Select
     End Function
 End Class

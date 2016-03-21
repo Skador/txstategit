@@ -9,7 +9,6 @@ Public Class Form1
     Dim Stud As New Student
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Stud.TotalFee()
 
         myDA.SelectCommand = New SqlCommand("select * from STUDENT", myConn)
         myDA.Fill(myDS, "STUDENT")
@@ -22,6 +21,8 @@ Public Class Form1
         TextBox2.DataBindings.Add(New Binding("Text", myBDS, "Name"))
         ComboBox1.DataBindings.Add(New Binding("Text", myBDS, "Type"))
         TextBox3.DataBindings.Add(New Binding("Text", myBDS, "NoOfCourses"))
+
+        Stud.TotalFee()
 
         DataGridView1.Visible = False
         Button4.Visible = False
@@ -126,6 +127,12 @@ Public Class Form1
         DGUpdate()
     End Sub
 
+    Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
+        Dim row As DataGridViewRow = DataGridView1.CurrentRow
+        myBDS.Position = row.Index
+        DGUpdate()
+    End Sub
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
         myDA.InsertCommand = New SqlCommand("insert into STUDENT(StudentID, Name, Type, NoOfCourses) values (@StudentID, @Name, @Type, @NoOfCourses)", myConn)
@@ -141,6 +148,7 @@ Public Class Form1
 
         myDS.Clear()
         myDA.Fill(myDS, "STUDENT")
+        Stud.TotalFee()
 
     End Sub
 
@@ -158,6 +166,7 @@ Public Class Form1
 
         myDS.Clear()
         myDA.Fill(myDS, "STUDENT")
+        Stud.TotalFee()
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
@@ -171,5 +180,6 @@ Public Class Form1
 
         myDS.Clear()
         myDA.Fill(myDS, "STUDENT")
+        Stud.TotalFee()
     End Sub
 End Class

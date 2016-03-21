@@ -61,7 +61,7 @@ Partial Class Form1
         '
         Me.CheckBox1.AutoSize = True
         Me.CheckBox1.Location = New System.Drawing.Point(81, 25)
-        Me.CheckBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.CheckBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(108, 17)
         Me.CheckBox1.TabIndex = 0
@@ -72,7 +72,7 @@ Partial Class Form1
         '
         Me.CheckBox2.AutoSize = True
         Me.CheckBox2.Location = New System.Drawing.Point(341, 25)
-        Me.CheckBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.CheckBox2.Margin = New System.Windows.Forms.Padding(2)
         Me.CheckBox2.Name = "CheckBox2"
         Me.CheckBox2.Size = New System.Drawing.Size(127, 17)
         Me.CheckBox2.TabIndex = 1
@@ -83,7 +83,7 @@ Partial Class Form1
         '
         Me.CheckBox3.AutoSize = True
         Me.CheckBox3.Location = New System.Drawing.Point(621, 25)
-        Me.CheckBox3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.CheckBox3.Margin = New System.Windows.Forms.Padding(2)
         Me.CheckBox3.Name = "CheckBox3"
         Me.CheckBox3.Size = New System.Drawing.Size(95, 17)
         Me.CheckBox3.TabIndex = 2
@@ -97,7 +97,7 @@ Partial Class Form1
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.StudentIDDataGridViewTextBoxColumn, Me.NameDataGridViewTextBoxColumn, Me.TypeDataGridViewTextBoxColumn, Me.NoOfCoursesDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.STUDENTBindingSource
         Me.DataGridView1.Location = New System.Drawing.Point(81, 202)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowTemplate.Height = 31
         Me.DataGridView1.Size = New System.Drawing.Size(635, 152)
@@ -180,7 +180,7 @@ Partial Class Form1
         'Button1
         '
         Me.Button1.Location = New System.Drawing.Point(657, 56)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(59, 24)
         Me.Button1.TabIndex = 12
@@ -190,7 +190,7 @@ Partial Class Form1
         'Button2
         '
         Me.Button2.Location = New System.Drawing.Point(657, 90)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(2)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(59, 24)
         Me.Button2.TabIndex = 13
@@ -200,7 +200,7 @@ Partial Class Form1
         'TextBox1
         '
         Me.TextBox1.Location = New System.Drawing.Point(81, 87)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(86, 20)
         Me.TextBox1.TabIndex = 14
@@ -208,7 +208,7 @@ Partial Class Form1
         'TextBox2
         '
         Me.TextBox2.Location = New System.Drawing.Point(223, 87)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TextBox2.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(86, 20)
         Me.TextBox2.TabIndex = 15
@@ -216,7 +216,7 @@ Partial Class Form1
         'TextBox3
         '
         Me.TextBox3.Location = New System.Drawing.Point(509, 87)
-        Me.TextBox3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TextBox3.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(86, 20)
         Me.TextBox3.TabIndex = 16
@@ -226,7 +226,7 @@ Partial Class Form1
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"Graduate", "Undergraduate"})
         Me.ComboBox1.Location = New System.Drawing.Point(366, 87)
-        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(86, 21)
         Me.ComboBox1.TabIndex = 17
@@ -234,7 +234,7 @@ Partial Class Form1
         'TextBox4
         '
         Me.TextBox4.Location = New System.Drawing.Point(81, 151)
-        Me.TextBox4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TextBox4.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(86, 20)
         Me.TextBox4.TabIndex = 19
@@ -252,7 +252,7 @@ Partial Class Form1
         'Button3
         '
         Me.Button3.Location = New System.Drawing.Point(197, 136)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(2)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(59, 23)
         Me.Button3.TabIndex = 20
@@ -266,7 +266,7 @@ Partial Class Form1
         'Button4
         '
         Me.Button4.Location = New System.Drawing.Point(81, 358)
-        Me.Button4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button4.Margin = New System.Windows.Forms.Padding(2)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(59, 25)
         Me.Button4.TabIndex = 21
@@ -276,7 +276,7 @@ Partial Class Form1
         'Button5
         '
         Me.Button5.Location = New System.Drawing.Point(268, 358)
-        Me.Button5.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button5.Margin = New System.Windows.Forms.Padding(2)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(59, 25)
         Me.Button5.TabIndex = 22
@@ -286,7 +286,7 @@ Partial Class Form1
         'Button6
         '
         Me.Button6.Location = New System.Drawing.Point(470, 358)
-        Me.Button6.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button6.Margin = New System.Windows.Forms.Padding(2)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(59, 25)
         Me.Button6.TabIndex = 23
@@ -296,7 +296,7 @@ Partial Class Form1
         'Button7
         '
         Me.Button7.Location = New System.Drawing.Point(657, 358)
-        Me.Button7.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button7.Margin = New System.Windows.Forms.Padding(2)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(59, 25)
         Me.Button7.TabIndex = 24
@@ -329,7 +329,7 @@ Partial Class Form1
         Me.Controls.Add(Me.CheckBox3)
         Me.Controls.Add(Me.CheckBox2)
         Me.Controls.Add(Me.CheckBox1)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Form1"
         Me.Text = "Form1"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
