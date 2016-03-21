@@ -21,14 +21,6 @@ Public Class Student
                 Else
                     Return TotalFee
                 End If
-                'Dim Count As Integer = row.Cells(3).Value
-                'Dim Move As Integer
-                'Dim Fee As Integer
-                'Fee = Calculate.TotalFees(Classification, Count)
-                ''MsgBox(Fee)
-                'row.Cells(4).Value = Fee
-
-                'Move = Move + 1
             Next
         Catch
         End Try
@@ -36,14 +28,12 @@ Public Class Student
     End Function
 
     Private Function convert(x As String)
-        'MsgBox(x)
         Select Case x
             Case "Graduate"
                 Return 0
             Case "Undergraduate"
                 Return 1
             Case Else
-                MsgBox("Students of type Undergraduate or Graduate do not exist, please check your database for errors.")
                 Return 2
         End Select
     End Function
