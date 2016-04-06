@@ -7,6 +7,10 @@ Public Class Form1
     Dim myDS As New DataSet
     Dim myBDS As New BindingSource
     Dim Stud As New Student
+    'Dim btnFist As New Button
+    'Dim btnLast As New Button
+    'Dim btnNext As New Button
+    'Dim btnPrevious As New Button
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 

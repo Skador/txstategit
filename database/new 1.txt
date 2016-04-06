@@ -1,0 +1,14 @@
+Cody Kern Michelle Leipnik Tammy Faron
+
+Customers
+CustID int	Primary Key, Identity(1,1), 
+
+Flights
+Column Name	Data Type	Data Domain and Constraints
+FlightID (PK)	int	Unique positive integer values, identity(1,1), primary key, not null
+Origin	varchar(50)	not null
+Destination	varchar(50)	not null
+DeptTime	smalldatetime	not null
+ArrivalTime	smalldatetime	not null
+Fare	smallmoney	Positive Values, Default 0, Check(Fare >= 0)
+PlaneID (FK)	int	not null, Foreign Key references PlaneID in the Planes table, Cascade Updates
