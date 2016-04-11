@@ -88,7 +88,7 @@ CREATE INDEX IX_InvoiceLineItems_InvoiceID On InvoiceLineItems(InvoiceID);
 CREATE INDEX IX_InvoiceLineItems_AccountNo On InvoiceLineItems(AccountNo ASC);
 CREATE NONCLUSTERED INDEX IX_Invoices_InvoiceDate ON Invoices(InvoiceDate DESC, InvoiceTotal DESC);
 CREATE UNIQUE INDEX IX_Vendors_VendorName ON Vendors(VendorName);
-
+GO
 -- Load Data Into Tabels
 -- Load Terms Table
 INSERT INTO Terms VALUES(1, 'Net due 10 days', 10);
@@ -119,9 +119,9 @@ INSERT INTO InvoiceLineItems VALUES(1, 1, 553, 40.20, 'Freight');
 INSERT INTO InvoiceLineItems VALUES(2, 1, 553, 3813.33, 'Freight');
 
 SELECT * FROM InvoiceLineItems;
-
+GO
 UPDATE Invoices SET PaymentTotal = 3813.33, PaymentDate = GETDATE() WHERE InvoiceID = 2;
-
+GO
 CREATE TABLE Employee
 (EmployeeID INT NOT NULL PRIMARY KEY,
 EmployeeFName VARCHAR(35) NOT NULL,
@@ -136,3 +136,20 @@ SELECT * FROM Employee;
 UPDATE Employee SET EmployeeSalary = EmployeeSalary * 1.13
 
 SELECT * FROM Employee;
+GO
+-- Alter the table stucture for invoicesx
+ALTER TABLE Invoices WITH NOCHECK
+ ADD EmployeeID INT NOT NULL DEFAULT 0 CONSTRAINT FK_EmployeeID FOREIGN KEY REFERENCES Employee(EmployeeID);
+
+SELECT * FROM Invoices; 
+GO
+
+INSERT INTO Invoices VALUES(2, '26325325', '03/10/2015', 400.20, 400.20, DEFAULT, 2, '03/30/2015', '2015-03-14', 1);
+SELECT * FROM Invoices; 
+GO
+-- Drop EmpID Column From Invoices Table
+ALTER TABLE Invoices DROP CONSTRAINT FK_EmployeeID;
+ALTER TABLE Invoices DROP CONSTRAINT DF__Invoices__Employ__1293BD5E;
+ALTER TABLE Invoices DROP COLUMN EmployeeID;
+SELECT * FROM Invoices;
+GO
