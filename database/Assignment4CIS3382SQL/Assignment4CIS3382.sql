@@ -6,8 +6,8 @@ Use Assignment4CIS3382;
 
 --Dropping tables to allow testing
 
-IF OBJECT_ID('dbo.MaintenenceProcedures', 'U') IS NOT NULL
-DROP TABLE MaintenenceProcedures;
+IF OBJECT_ID('dbo.MaintenanceProcedures', 'U') IS NOT NULL
+DROP TABLE MaintenanceProcedures;
 
 IF OBJECT_ID('dbo.Reservations', 'U') IS NOT NULL
 DROP TABLE Reservations;
@@ -42,8 +42,8 @@ CREATE TABLE Planes(
 PlaneID INT NOT NULL PRIMARY KEY,
 ModelNumber VARCHAR(20) NOT NULL,
 TotalCapacity VARCHAR(200) NOT NULL,
-MaintenanceDateTime DATETIME NOT NULL, -- Modifying for DATETIME
--- MaintenanceTime TIME NOT NULL
+MaintDateTime DATETIME NOT NULL, -- Modifying for DATETIME
+-- MaintTime TIME NOT NULL
 );
 
 -- Create Customers Table
@@ -51,7 +51,7 @@ CREATE TABLE Customers(
 CustID INT NOT NULL PRIMARY KEY IDENTITY(1,1),
 CustFName VARCHAR(50) NOT NULL,
 CustLName VARCHAR(50) NOT NULL,
-CustMInitial VARCHAR(50) NULL, -- Needs to be changed on Data doc
+CustMInitial CHAR NULL, -- Needs to be changed on Data doc
 CustDOB DATE NOT NULL,
 CustHPhone VARCHAR(50) NULL,
 CustWPhone VARCHAR(50) NULL,
@@ -74,7 +74,7 @@ ArrivalDateTime DATETIME NOT NULL, -- Needs updated name (Spellcheck)
 --ArrivalTime TIME NOT NULL, -- Same as above
 StandardFare SMALLMONEY NOT NULL); -- Needs updates on the Data Dictionary
 
--- Create Maintenance Table
+-- Create Maint Table
 CREATE TABLE Maintenance(
 MaintID INT NOT NULL PRIMARY KEY IDENTITY(1,1), --Needs update on name
 PlaneID INT NOT NULL REFERENCES Planes(PlaneID) ON UPDATE CASCADE,
@@ -101,8 +101,8 @@ CONSTRAINT FK_FlightID FOREIGN KEY(FlightID) REFERENCES Flights(FlightID) ON UPD
 CONSTRAINT FK_CustID FOREIGN KEY(CustID) REFERENCES Customers(CustID) ON UPDATE CASCADE,
 CONSTRAINT CK_PaymentAmt CHECK(PaymentAmt >= 0));
 
--- Create MaintenenceProcedures Table
-CREATE TABLE MaintenenceProcedures(
+-- Create MaintenanceProcedures Table
+CREATE TABLE MaintenanceProcedures(
 MaintID INT NOT NULL PRIMARY KEY REFERENCES Maintenance(MaintID), -- Remove Identity 
 ProcedureID INT NOT NULL REFERENCES Procedures(ProcedureID) ON UPDATE CASCADE,
 ActualTime VARCHAR(50) NOT NULL);
@@ -119,11 +119,12 @@ GO
 
 -- Insert Data
 
-INSERT INTO Procedures VALUES('Repairing of Landing Gear Tires', '5 Working Days'), ('Replacing elastic shock absorber cords', '10 Working Days')
+INSERT INTO Procedures VALUES('Repairing of Landing Gear Tires', '5 Working Days'), 
+   ('Replacing elastic shock absorber cords', '10 Working Days')
 SELECT * FROM Procedures;
 
-INSERT INTO Planes VALUES(123, 'PL112233', 'H350', '12/13/2014 10:30am');
-INSERT INTO Planes VALUES(456, 'PL445566', 'H465', '04/25/2014 2:30pm');
+INSERT INTO Planes VALUES(123, 'PL112233', 154, '12/13/2014 10:30am');
+INSERT INTO Planes VALUES(456, 'PL445566', 186, '04/25/2014 2:30pm');
 SELECT * FROM Planes;
 
 INSERT INTO Customers VALUES('John', 'Smith', 'J', '5/4/1979', '214-666-1212', NULL, '214-666-1212', 'JohnSmith@yahoo.com');
@@ -141,6 +142,6 @@ INSERT INTO Reservations VALUES(321456, 1, '6/15/2014 9:00am', '6/15/2014 8:00am
     (654123, 2, '8/01/2015 7:00am', '8/01/2015 6:00am', 358, 358, '7/15/2015 11:30am');
 SELECT * FROM Reservations;
 
-INSERT INTO MaintenenceProcedures VALUES(1, 2, '9 Working Days'), (2, 1, '6 Working Days');
-SELECT * FROM MaintenenceProcedures;
+INSERT INTO MaintenanceProcedures VALUES(1, 2, '9 Working Days'), (2, 1, '6 Working Days');
+SELECT * FROM MaintenanceProcedures;
 Go

@@ -1,0 +1,71 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPage.master.vb" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+
+            <table class="auto-style1">
+                <tr>
+                    <td>
+                        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                          <h1>1</h1>
+                        </asp:ContentPlaceHolder></td>
+                    <td>         
+                        <asp:ContentPlaceHolder id="ContentPlaceHolder2" runat="server">
+                          <h1> 2 </h1>
+                        </asp:ContentPlaceHolder></td>
+                    <td> 
+                        <asp:ContentPlaceHolder id="ContentPlaceHolder3" runat="server">
+                          <h1> 3 </h1>
+                         </asp:ContentPlaceHolder>
+                    </td>       
+                </tr>
+                <tr>
+                    <td>
+                        <asp:ContentPlaceHolder id="ContentPlaceHolder4" runat="server">
+                          <h1>4</h1>
+                        </asp:ContentPlaceHolder></td>
+                    <td>         
+                        <asp:ContentPlaceHolder id="ContentPlaceHolder5" runat="server">
+                          <h1> 5 </h1>
+                        </asp:ContentPlaceHolder></td>
+                    <td> 
+                        <asp:ContentPlaceHolder id="ContentPlaceHolder6" runat="server">
+                          <h1> 6 </h1>
+                         </asp:ContentPlaceHolder>
+                    </td>       
+                </tr>
+                <tr>
+                    <td>
+                        <asp:ContentPlaceHolder id="ContentPlaceHolder7" runat="server">
+                          <h1>7</h1>
+                        </asp:ContentPlaceHolder></td>
+                    <td>         
+                        <asp:ContentPlaceHolder id="ContentPlaceHolder8" runat="server">
+                          <h1> 8 </h1>
+                        </asp:ContentPlaceHolder></td>
+                    <td> 
+                        <asp:ContentPlaceHolder id="ContentPlaceHolder9" runat="server">
+                          <h1> 9 </h1>
+                         </asp:ContentPlaceHolder>
+                    </td>       
+                </tr>
+            </table>
+        
+    </form>
+    Response.Redirect("Page1.aspx")
+</body>
+</html>

@@ -153,3 +153,17 @@ ALTER TABLE Invoices DROP CONSTRAINT DF__Invoices__Employ__1293BD5E;
 ALTER TABLE Invoices DROP COLUMN EmployeeID;
 SELECT * FROM Invoices;
 GO
+
+-- Delete from InvoiceLineItems
+SELECT * FROM InvoiceLineItems;
+
+DELETE FROM InvoiceLineItems WHERE InvoiceID = 2;
+SELECT * FROM InvoiceLineItems;
+GO
+
+-- Select from multiple tables
+SELECT *
+FROM Vendors INNER JOIN Invoices ON Vendors.VendorID = Invoices.VendorID 
+INNER JOIN InvoiceLineItems ON Invoices.InvoiceID = InvoiceLineItems.InvoiceID
+INNER JOIN GLAccounts ON InvoiceLineItems.AccountNo = GLAccounts.AccountNo ;
+GO

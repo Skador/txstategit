@@ -1,0 +1,31 @@
+﻿body {
+}
+
+.menu{
+    font-family:Arial;
+    font-size:1em;
+    font-weight:bold;
+    border:solid .1em blue;
+}
+
+.menuHead{
+    color:white;
+    background-color:navy;
+    text-align:center;
+}
+
+.menuItem{
+    background-color:aqua;
+    padding-left:.4em;
+}
+
+    .menuItem a{
+        color:navy;
+        background:aqua;
+        text-decoration:none;
+    }
+
+        .menuItem a:hover {
+            color:White;
+            background:Navy;
+        }
