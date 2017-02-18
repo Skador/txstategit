@@ -1,0 +1,6 @@
+Consumer Name	Monthly Salary	Months of Pay	Yearly Salary
+Cody Kern	111	32	3552.0
+Fdad sadf	23	12	276.0
+Tra sdf	219	21	4599.0
+Fred Altnis	2	123	246.0
+fdsaf fdasf	123	123	15129.0

@@ -1,2 +1,0 @@
-Consumer Name	Monthly Salary	Months of Pay	Yearly Salary
-Cody Kern	6500	12	78000.0
