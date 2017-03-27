@@ -66,7 +66,7 @@ public class TxstateSalary {
     FileWriter fwriter = new FileWriter(filename, true);
     PrintWriter outputFile = new PrintWriter(fwriter);
 
-    yearlySalary = monthlySal*monthsOfPay;
+    yearlySalary = monthlySal * monthsOfPay;
 
     //Adding the header if the file doesn't exist
     if(filename.length() == 0){
