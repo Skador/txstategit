@@ -9,6 +9,8 @@ public class TestStudent {
     String name, gender, race, id, university, country;
     Scanner keyboard = new Scanner(System.in);
 
+    //Student[] arrayStud = new Student[10];
+
     System.out.println("Testing Person Class:");
     System.out.println("");
 
@@ -47,23 +49,34 @@ public class TestStudent {
     Student myStud = new Student();
     System.out.println("");
 
-    System.out.println("Test 6 Student Full Constructor");
-    System.out.println("Please fill in the required information to test.");
-    System.out.print("Name: ");
-    name = keyboard.nextLine();
-    System.out.print("Gender: ");
-    gender = keyboard.nextLine();
-    System.out.print("Race: ");
-    race = keyboard.nextLine();
-    System.out.print("ID: ");
-    id = keyboard.nextLine();
-    System.out.print("University: ");
-    university = keyboard.nextLine();
-    System.out.print("Country: ");
-    country = keyboard.nextLine();
-    System.out.println("");
+   // for(int i = 0; i < arrayStud.length; i++) {
 
+      System.out.println("Test 6 Student Full Constructor");
+      System.out.println("Please fill in the required information to test.");
+      System.out.print("Name: ");
+      name = keyboard.nextLine();
+      System.out.print("Gender: ");
+      gender = keyboard.nextLine();
+      System.out.print("Race: ");
+      race = keyboard.nextLine();
+      System.out.print("ID: ");
+      id = keyboard.nextLine();
+      System.out.print("University: ");
+      university = keyboard.nextLine();
+      System.out.print("Country: ");
+      country = keyboard.nextLine();
+      System.out.println("");
+
+    //   arrayStud[i] = new Student(name, gender, race, id, university, country);
     Student myStudent2 = new Student(name, gender, race, id, university, country);
+    //   System.out.println(i);
+
+   // }
+
+   // for(int i = 0; i < arrayStud.length; i++){
+   //   System.out.println(arrayStud[i].getName());
+   //   System.out.println(arrayStud[i].getUniversity());
+   // }
 
     System.out.println("Displaying information received");
     System.out.println("Name: " + myStudent2.getName());
