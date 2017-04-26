@@ -24,6 +24,8 @@ public class KiloConverterGui extends JFrame{
       @Override
       public void actionPerformed(ActionEvent e) {
         double miles = Double.parseDouble(kiloTextField.getText());
+        int mliens = Integer.parseInt(kiloTextField.getText());
+
         miles = miles*0.6214;
         JOptionPane.showMessageDialog(null, miles);
       }

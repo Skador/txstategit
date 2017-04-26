@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="CIS3374@datastore.ro">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.0">
+    <root id="1"/>
+    <schema id="2" parent="1" name="CIS3374">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="cookbook"/>
+    <schema id="4" parent="1" name="fengdb"/>
+    <schema id="5" parent="1" name="information_schema"/>
+    <schema id="6" parent="1" name="limesurvey"/>
+    <schema id="7" parent="1" name="loginphp"/>
+    <schema id="8" parent="1" name="moodle"/>
+    <schema id="9" parent="1" name="myproject"/>
+    <schema id="10" parent="1" name="mysql"/>
+    <schema id="11" parent="1" name="performance_schema"/>
+    <schema id="12" parent="1" name="phpmyadmin"/>
+    <schema id="13" parent="1" name="piwik"/>
+    <schema id="14" parent="1" name="weberp"/>
+    <table id="15" parent="2" name="Address"/>
+    <table id="16" parent="2" name="Coffee"/>
+    <table id="17" parent="2" name="Customer"/>
+    <column id="18" parent="15" name="AddressID">
+      <Position>1</Position>
+      <DataType>int(3)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="19" parent="15" name="Street_Number">
+      <Position>2</Position>
+      <DataType>int(4)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="20" parent="15" name="Street_Name">
+      <Position>3</Position>
+      <DataType>varchar(35)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="21" parent="15" name="Building_Number">
+      <Position>4</Position>
+      <DataType>int(4)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="22" parent="15" name="Zip_Code">
+      <Position>5</Position>
+      <DataType>int(4)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="23" parent="15" name="PRIMARY">
+      <ColNames>AddressID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="24" parent="16" name="CoffeeID">
+      <Position>1</Position>
+      <DataType>int(3)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="25" parent="16" name="Description">
+      <Position>2</Position>
+      <DataType>varchar(25)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="26" parent="16" name="Price">
+      <Position>3</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <index id="27" parent="16" name="CoffeeID">
+      <ColNames>CoffeeID</ColNames>
+    </index>
+    <key id="28" parent="16" name="PRIMARY">
+      <ColNames>CoffeeID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="29" parent="17" name="CustomerID">
+      <Position>1</Position>
+      <DataType>int(3)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="30" parent="17" name="AddressID">
+      <Position>2</Position>
+      <DataType>int(3)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="31" parent="17" name="Email_Address">
+      <Position>3</Position>
+      <DataType>varchar(15)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="32" parent="17" name="AddressID">
+      <ColNames>AddressID</ColNames>
+    </index>
+    <key id="33" parent="17" name="PRIMARY">
+      <ColNames>CustomerID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="34" parent="17" name="Customer_ibfk_1">
+      <ColNames>AddressID</ColNames>
+      <RefSchemaName>CIS3374</RefSchemaName>
+      <RefTableName>Address</RefTableName>
+      <RefColNames>AddressID</RefColNames>
+      <OnUpdate>update</OnUpdate>
+      <OnDelete>no-action</OnDelete>
+    </foreign-key>
+  </database-model>
+</dataSource>
