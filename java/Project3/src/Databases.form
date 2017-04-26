@@ -26,7 +26,9 @@
         <children>
           <component id="e8984" class="javax.swing.JList" binding="list1" default-binding="true">
             <constraints/>
-            <properties/>
+            <properties>
+              <doubleBuffered value="true"/>
+            </properties>
           </component>
         </children>
       </scrollpane>

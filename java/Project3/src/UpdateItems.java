@@ -9,7 +9,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 /**
- * Created by Skador on 4/26/2017.
+ * Created by Cody M Kern and Michelle Leipnik on 4/26/2017.
  */
 public class UpdateItems extends JFrame{
   private JPanel panel1;
@@ -25,22 +25,21 @@ public class UpdateItems extends JFrame{
     pack();
     setVisible(true);
 
-
     updateButton.addActionListener(new ActionListener() {
       @Override
       public void actionPerformed(ActionEvent e) {
         try {
           Class.forName("com.mysql.jdbc.Driver").newInstance();
           Connection myConn = DriverManager.getConnection("jdbc:mysql://datastore.ro:3306/CIS3374", "cis3374", "cis3374");
+
           Statement sqlStmt = myConn.createStatement();
           String sqlUpdate = "UPDATE Coffee SET Description = '" + textField1.getText() +"', Price = '" + Double.parseDouble(textField2.getText()) + "' WHERE CoffeeID = '" + coffeeID[0] + "'";
-          JOptionPane.showMessageDialog(null, sqlUpdate);
           int row = sqlStmt.executeUpdate(sqlUpdate);
+
           JOptionPane.showMessageDialog(null, "Updated " + row + " row(s)");
 
           myConn.close();
           dispose();
-
 
         } catch (InstantiationException e1) {
           e1.printStackTrace();

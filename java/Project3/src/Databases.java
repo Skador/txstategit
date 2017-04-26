@@ -1,12 +1,11 @@
 package src;
 
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.event.*;
 import java.sql.*;
 
 /**
- * Created by Skador on 4/12/2017.
+ * Created by Cody M Kern and Michelle Leipnik on 4/12/2017.
  */
 public class Databases extends JFrame{
   private JPanel panel1;
@@ -31,10 +30,11 @@ public class Databases extends JFrame{
         try {
           Class.forName("com.mysql.jdbc.Driver").newInstance();
           Connection myConn = DriverManager.getConnection("jdbc:mysql://datastore.ro:3306/CIS3374", "cis3374", "cis3374");
+
           Statement sqlStmt = myConn.createStatement();
           String sqlSelect = "select * from Coffee";
-          ResultSet myRs = sqlStmt.executeQuery(sqlSelect);
 
+          ResultSet myRs = sqlStmt.executeQuery(sqlSelect);
           DefaultListModel listModel = new DefaultListModel();
 
           while (myRs.next()) {
@@ -71,12 +71,16 @@ public class Databases extends JFrame{
           Class.forName("com.mysql.jdbc.Driver").newInstance();
           Connection myConn = DriverManager.getConnection("jdbc:mysql://datastore.ro:3306/CIS3374", "cis3374", "cis3374");
           Statement sqlStmt = myConn.createStatement();
+
+          //Figures out what value is the coffee ID
           String coffeeIDString = list1.getSelectedValue().toString();
           String[] coffeeID = coffeeIDString.split(" ");
+
           String sqlDelete = "DELETE FROM Coffee WHERE COFFEEID = " + coffeeID[0];
           int row = sqlStmt.executeUpdate(sqlDelete);
           JOptionPane.showMessageDialog(null, row + " row(s) deleted");
 
+          //Refreshed the list1 box
           String sqlSelect = "select * from Coffee";
           ResultSet myRs = sqlStmt.executeQuery(sqlSelect);
 
@@ -97,6 +101,8 @@ public class Databases extends JFrame{
           e1.printStackTrace();
         } catch (SQLException e1) {
           e1.printStackTrace();
+        } catch (NullPointerException e1) {
+          JOptionPane.showMessageDialog(null, "Please select a value to delete.");
         }
       }
     });
@@ -104,9 +110,16 @@ public class Databases extends JFrame{
     updateButton.addActionListener(new ActionListener() {
       @Override
       public void actionPerformed(ActionEvent e) {
-        String coffeeIDString = list1.getSelectedValue().toString();
-        String[] coffeeID = coffeeIDString.split(" ");
-        new UpdateItems(coffeeID);
+        try{
+          //Figures out what value is the coffee ID
+          String coffeeIDString = list1.getSelectedValue().toString();
+          String[] coffeeID = coffeeIDString.split(" ");
+
+          new UpdateItems(coffeeID);
+
+        } catch (NullPointerException e1) {
+          JOptionPane.showMessageDialog(null, "Please select a value to update.");
+        }
       }
     });
   }

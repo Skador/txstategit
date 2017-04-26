@@ -1,13 +1,12 @@
 package src;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.*;
 
 /**
- * Created by Skador on 4/12/2017.
+ * Created by Cody M Kern and Michelle Leipnik on 4/12/2017.
  */
 public class AddItems extends JFrame {
   private JPanel panel1;
@@ -31,8 +30,10 @@ public class AddItems extends JFrame {
           Class.forName("com.mysql.jdbc.Driver").newInstance();
           Connection myConn = DriverManager.getConnection("jdbc:mysql://datastore.ro:3306/CIS3374", "cis3374", "cis3374");
           Statement sqlStmt = myConn.createStatement();
+
           String sqlInsert = "insert into Coffee (Description, Price) values ('"+ textField1.getText() + "', '" + Double.parseDouble(textField2.getText()) + "')";
           int row = sqlStmt.executeUpdate(sqlInsert);
+
           JOptionPane.showMessageDialog(null, "Added " + row + " row(s)");
 
           myConn.close();
